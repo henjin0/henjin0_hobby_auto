@@ -1,62 +1,305 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>レスポンシブカードレイアウト</title>
+    <title>henjin0ホビーオート</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0e6d2;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background: url('title.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            background-color: rgba(212, 199, 176, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2,
+        h5 {
+            font-family: 'Arial Black', sans-serif;
+            color: #8b4513;
+        }
+
+        .btn-retro {
+            background-color: #cd853f;
+            border-color: #8b4513;
+            color: #fff;
+        }
+
+        .btn-retro:hover {
+            background-color: #8b4513;
+            color: #fff;
+        }
+
+        .content {
+            flex: 1 0 auto;
+        }
+
+        footer {
+            flex-shrink: 0;
+            background-color: #8b7355;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container mt-4">
-        <h1 class="mb-4">コンテンツカード</h1>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/api/placeholder/300/200" class="card-img-top" alt="カード画像 1">
-                    <div class="card-body">
-                        <h5 class="card-title">カード 1</h5>
-                        <p class="card-text">これはカード1の説明文です。ここに短い説明を入れることができます。</p>
+    <div class="content">
+        <div class="container-fluid p-0">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="hero-content text-center">
+                                <h1 class="display-4 fw-bold">henjin0ホビーオート</h1>
+                                <p class="lead">ラジコン作成や趣味レベルの自律走行ロボットなどを3Dプリンタとかでさっさと作りたい方に向けた様々なSTLパーツを共有しています。</p>
+                                <a href="#" class="btn btn-retro btn-lg">STLパーツを見る</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/api/placeholder/300/200" class="card-img-top" alt="カード画像 2">
-                    <div class="card-body">
-                        <h5 class="card-title">カード 2</h5>
-                        <p class="card-text">これはカード2の説明文です。ここに短い説明を入れることができます。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/api/placeholder/300/200" class="card-img-top" alt="カード画像 3">
-                    <div class="card-body">
-                        <h5 class="card-title">カード 3</h5>
-                        <p class="card-text">これはカード3の説明文です。ここに短い説明を入れることができます。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/api/placeholder/300/200" class="card-img-top" alt="カード画像 4">
-                    <div class="card-body">
-                        <h5 class="card-title">カード 4</h5>
-                        <p class="card-text">これはカード4の説明文です。ここに短い説明を入れることができます。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100">
-                    <img src="/api/placeholder/300/200" class="card-img-top" alt="カード画像 5">
-                    <div class="card-body">
-                        <h5 class="card-title">カード 5</h5>
-                        <p class="card-text">これはカード5の説明文です。ここに短い説明を入れることができます。</p>
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>ライセンスについて</h2>
+                        <p>ライセンスについては各製品のリンク先を参照してください。</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="container mt-4">
+            <h1 class="mb-4">手の平サイズな車</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/TinyTrekker">
+                        <img src="tinytreckker.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">TinyTrekker</h5>
+                            <p class="card-text">
+                                手の平サイズ、ユニバーサルプレート的な穴が空いた車です。サーボモーターを２つ使うことで垂直に近い角度までハンドルを切れるほか、部品点数が少ないため組み立てが簡単です。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/TinyTreckker-1S">
+                        <img src="tinytreckker1s.png" class="card-img-top" alt="カード画像 2">
+                        <div class="card-body">
+                            <h5 class="card-title">TinyTrekker-1S</h5>
+                            <p class="card-text">
+                                手の平サイズ、ユニバーサルプレート的な穴が空いた車です。サーボモーターを1つにしました。より小型化したかったり、部品代を節約したい場合におすすめです。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container mt-4">
+            <h1 class="mb-4">A4に収まるサイズな車</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/KamabokoCruiser">
+                        <img src="KamabokoCruiser.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">KamabokoCruiser</h5>
+                            <p class="card-text">
+                                蒲鉾の板のようなサイズとフラットベッドが特徴的な車です。ラックランドピニオンを用いたステアリングなため、適切に角度を決めたい場合にいい感じです。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/Kari-Kuruma">
+                        <img src="kari-kuruma.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Kari-Kuruma</h5>
+                            <p class="card-text">ゼムクリップを使った転舵をします。また、タミヤな部品を色々と使えます。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/GeekBaggy">
+                        <img src="GeekBaggy.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">GeekBaggy</h5>
+                            <p class="card-text">
+                                Geekservoを活用した四輪駆動な車です。レーザーカッターで2.5mmのMDFから切り出すことで作れます。LEGOテクニックのペグ部品と赤GeekServo4個あるいはローテーションサーボな橙or緑GeekServo4個があれば作れます。
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <h1 class="mb-4">LEGOテクニック互換</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link">
+                        <img src="SG90_and_LEGO_Technic_Combined_Car_Project.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">SG90_and_LEGO_Technic_Combined_Car_Project</h5>
+                            <p class="card-text">
+                                サーボモーターのSG-90とLEGOテクニックをくっつけてラジコンカー的な何かを作れるようにしたパーツ群です。テクニック穴7x7サイズと7x9サイズがあります。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/Kondokagaku_MC-8_Parts_LEGO_Joints">
+                        <img src="Kondokagaku_MC-8_Parts_LEGO_Joints.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Kondokagaku_MC-8_Parts_LEGO_Joints</h5>
+                            <p class="card-text">近藤科学のMC-8に付属する受信機側パーツをLEGOに組み付けられるようにしたジョイントパーツです。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/TAMIYAWheel_LEGOAxle_Joints">
+                        <img src="TAMIYAWheel_LEGOAxle_Joints.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">TAMIYAWheel_LEGOAxle_Joints</h5>
+                            <p class="card-text">TAMIYAの楽しい工作シリーズやミニ四駆などで使わえるホイールとLEGOテクニック互換でAxleを組み付けられるジョイントパーツです。
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://protopedia.net/prototype/3385">
+                        <img src="protolotus.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">ProtoLotus</h5>
+                            <p class="card-text">楽しい工作シリーズやLEGO関係のブロックと互換する自作パーツを作れるソフトウェアです。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/Vivahome_SpngeGrip_Wheel">
+                        <img src="Vivahome_SpngeGrip_Wheel.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Vivahome_SpngeGrip_Wheel</h5>
+                            <p class="card-text">ビバホームで買えるスポンジグリップを加工して作るホイールです。LEGOテクニックに互換したりミニ四駆的なやつに使えたりします。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/LEGO_N20_DC_Gear_Motor">
+                        <img src="LEGO_N20_DC_Gear_Motor.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">LEGO_N20_DC_Gear_Motor</h5>
+                            <p class="card-text">N20モーターをLEGOテクニックに組み付けられるようにするパーツです</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/LEGO_technic_bendbush">
+                        <img src="LEGO_technic_bendbush.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">LEGO_technic_bendbush</h5>
+                            <p class="card-text">LEGOテクニックのAxleをいい感じの角度に曲げて接合するための互換パーツです。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/LEGO-Board-Enclosures/blob/main/MotorDriver/makerdrive_enclosure.stl">
+                        <img src="makerdrive_enclosure.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">LEGO-Board-Enclosures/makerdrive</h5>
+                            <p class="card-text">LEGOテクニックにCytron社製モータドライバのMakerDriveを組み付けやすくするための互換パーツです。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <h1 class="mb-4">TAMIYAユニバーサルプレート互換</h1>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/SG-90_ServoBracket_STL">
+                        <img src="SG-90_ServoBracket_STL.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">SG-90_ServoBracket_STL</h5>
+                            <p class="card-text">サーボモーターのSG-90をユニバーサルプレートに組み付けられるようにするパーツです</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/FS0403_FS0307_ServoBracket_STL">
+                        <img src="FS0403_FS0307_ServoBracket_STL.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">FS0403_FS0307_ServoBracket_STL</h5>
+                            <p class="card-text">サーボモーターのFS0403ならびにFS0307をユニバーサルプレートに組み付けられるようにするパーツです</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/EasyDCMotorBracket">
+                        <img src="EasyDCMotorBracket.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">EasyDCMotorBracket</h5>
+                            <p class="card-text">
+                                様々なDCモータを扱えるギアボックスです。TAMIYAのユニバーサルプレートに組付け可能です。現在FA-130、ST-20、N20の規格をもったモータが利用できます。</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col position-relative">
+                    <a class="card h-100 text-decoration-none stretched-link"
+                        href="https://github.com/henjin0/Vivahome_SpngeGrip_Wheel">
+                        <img src="Vivahome_SpngeGrip_Wheel.png" class="card-img-top" alt="カード画像 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Vivahome_SpngeGrip_Wheel</h5>
+                            <p class="card-text">ビバホームで買えるスポンジグリップを加工して作るホイールです。LEGOテクニックに互換したりミニ四駆的なやつに使えたりします。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 henjin0. All rights reserved.</p>
+        </div>
+    </footer>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
